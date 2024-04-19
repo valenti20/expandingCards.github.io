@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Red Rose", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    overflow: hidden;
+    margin: 0;
+}
+.degrade{
+    background:linear-gradient(to left, #faf7f6, #65d9f7);
+    background-size:400% 400%;
+    animation: animate-background 5s infinite ease-in-out;
+}
+@keyframes animate-background{
+    0%{
+        background-position:0 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0 50%;
+    }
+}
+h1{
+    font-size: 25px;
+    text-align: center;
+    display: flex;
+    margin: 10px 600px;
+}
+.contenedor{
+    display: flex;
+    width: 90vw;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+.img{
+    width:200px;
+    height: 550px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 40px;
+    margin: 10px; 
+    flex: 0.5;
+    position: relative;
+    transition: flex 0.8s ease-in;
+    cursor:grab;
+}
+.img h3{
+    color: blanchedalmond;
+    font-size: 20px;
+    bottom: 20px;
+    left: 20px;
+    position: absolute;
+    margin: 0;
+    opacity: 0;
+}
+.img.active{
+    cursor: grabbing;
+    flex: 5;
+}
+.img.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+    background:linear-gradient(to right, rgba(41, 40, 40, 0.75), rgba(165, 162, 162, 0.75));
+}
+.copy{
+    justify-content: center;
+    text-align: center;
+    margin: 0px 500px;
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        width: auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    h1{
+        margin: 30% 5% 0% 25%;
+        font-size: 25px;
+        padding: 0px;
+        width: 45%;
+    }
+    .contenedor{
+        padding: 0px;
+        margin: 10% 5%;
+        width: 90%;
+    }
+    .img{
+        height: 250px;
+    }
+    .img h3{
+        font-size: 20%;
+        margin: 0%;
+    }
+    footer{
+        width: 95%;
+    }
+    .copy{
+        padding: 0px;
+        margin: 0% 15%;
+    }
+}
+    
